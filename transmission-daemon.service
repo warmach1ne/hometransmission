@@ -1,0 +1,14 @@
+[Unit]
+Description=Transmission BitTorrent Daemon
+After=network.target
+
+[Service]
+User=root
+Type=notify
+ExecStart=/usr/local/bin/transmission-daemon -f --log-level=error
+ExecReload=/bin/kill -s HUP $MAINPID
+NoNewPrivileges=true
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
