@@ -1,5 +1,5 @@
 # hometransmission
-settings for transmission 4 with proxmox lxc ubuntu
+Build and setup for transmission 4 with proxmox lxc ubuntu
 
 Installation steps
 1. Within Proxmox create a container with latest Ubuntu
