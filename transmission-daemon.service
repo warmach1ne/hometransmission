@@ -4,11 +4,10 @@ After=network.target
 
 [Service]
 User=root
-Type=notify
+Type=simple
 ExecStart=/usr/local/bin/transmission-daemon -f --log-level=error
 ExecReload=/bin/kill -s HUP $MAINPID
-NoNewPrivileges=true
-Restart=on-failure
+NoNewPrivileges=false
 
 [Install]
 WantedBy=multi-user.target
