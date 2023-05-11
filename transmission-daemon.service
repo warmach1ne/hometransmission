@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=root
 Type=simple
-ExecStart=/usr/local/bin/transmission-daemon -f --log-level=error
+ExecStart=/usr/local/bin/transmission-daemon -f
 ExecReload=/bin/kill -s HUP $MAINPID
 NoNewPrivileges=false
 
